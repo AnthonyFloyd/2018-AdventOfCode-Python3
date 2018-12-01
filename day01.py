@@ -4,6 +4,10 @@ Day 1: Chronal Calibration
 
 '''
 
+DAY = '1'
+NAME = 'Chronal Calibration'
+INPUT_FILE = 'day01-input.txt'
+
 def accumulateFromList(intList):
     '''Sum a list of ints.
 
@@ -42,25 +46,27 @@ def findFirstDuplicate(intList):
 
     return total
 
-if __name__ == '__main__':
+def run():
+    '''Run both part 1 and part 2 for AoC2018 Day 1.
 
-    print('Advent of Code')
-    print('Day 1: Chronal Calibration')
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    '''
+
+    from advent_of_code import printBoilerPlate, readFileToList
+
+    printBoilerPlate(DAY, NAME)
 
     # gather inputs
-    inputFilename = 'day01-input.txt'
-    with open(inputFilename) as inputFile:
-        inputLines = inputFile.readlines()
-        inputList = [int(i.strip()) for i in inputLines]
+    inputList = readFileToList(INPUT_FILE, transformation=int)
 
     # Part 1
     print('\nPart 1')
     finalFrequency = accumulateFromList(inputList)
-    print('Final frequency: {}'.format(finalFrequency))
+    print(f'Final frequency: {finalFrequency}')
 
     # Part 2
     print('\nPart 2')
     firstDuplicate = findFirstDuplicate(inputList)
-    print('First duplicate frequency: {}'.format(firstDuplicate))
+    print(f'First duplicate frequency: {firstDuplicate}')
 
+if __name__ == '__main__':
+    run()
