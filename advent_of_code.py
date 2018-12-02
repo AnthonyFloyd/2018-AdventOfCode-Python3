@@ -4,6 +4,7 @@
 from typing import List, Callable, Any
 
 from day01 import accumulateFromList, findFirstDuplicate
+from day02 import generateCheckSum, findWordsDifferringByOneLetter
 
 def printBoilerPlate(day:str, description:str) -> None:
     '''Write out a boilerplate header for the Advent of Code trials.
@@ -27,3 +28,16 @@ def readFileToList(filename:str, transformation=lambda x: x) -> List[Any]:
         inputList:List[Any] = [transformation(i.strip()) for i in inputLines]
 
     return inputList
+
+def multiplyListElements(myList):
+    '''
+    Multiply the elements of the list together.
+
+    '''
+
+    total = 1
+
+    for item in myList:
+        total *= item
+
+    return total
