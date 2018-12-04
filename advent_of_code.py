@@ -5,6 +5,7 @@ from typing import List, Callable, Any
 
 from day01 import accumulateFromList, findFirstDuplicate
 from day02 import generateCheckSum, findWordsDifferringByOneLetter
+from day03 import ClaimMap
 
 def printBoilerPlate(day:str, description:str) -> None:
     '''Write out a boilerplate header for the Advent of Code trials.
