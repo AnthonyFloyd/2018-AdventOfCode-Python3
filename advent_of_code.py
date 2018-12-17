@@ -8,7 +8,8 @@ from day02 import generateCheckSum, findWordsDifferringByOneLetter
 from day03 import ClaimMap
 from day04 import parseSleepRecord, assessSleepLog
 from day05 import reducePolymer, countUnits,  optimizePolymer
-from day06 import createCoordinateMap
+from day06 import CoordinateMap
+from day07 import Factory
 
 def printBoilerPlate(day:str, description:str) -> None:
     '''Write out a boilerplate header for the Advent of Code trials.

@@ -95,7 +95,9 @@ def main():
     '''Run Advent of Code Day 4
 
     '''
-    from advent_of_code import readFileToList
+    from advent_of_code import readFileToList, printBoilerPlate
+
+    printBoilerPlate(DAY, NAME)
 
     # part 1
     sleepRecord = sorted(readFileToList(filename=INPUT_FILE))

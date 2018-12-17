@@ -1,7 +1,7 @@
 # tests for AoC day6
 
 import unittest
-from advent_of_code import createCoordinateMap
+from advent_of_code import CoordinateMap
 
 TEST_COORDINATES = [(1, 1),
                     (1, 6),
@@ -14,10 +14,11 @@ TEST_COORDINATES = [(1, 1),
 class TestChronalCoordinates(unittest.TestCase):
     def test1(self):
 
-        testMap = createCoordinateMap(TEST_COORDINATES)
+        testMap = CoordinateMap(TEST_COORDINATES)
         testMap.printMap()
 
         self.assertEqual(testMap.maxArea, 17)
+        self.assertEqual(testMap.findSafeRegionSize(32), 16)
 
 
 

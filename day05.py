@@ -102,7 +102,9 @@ def main():
     '''Run Advent of Code Day 5
 
     '''
-    from advent_of_code import readFileToList
+    from advent_of_code import readFileToList, printBoilerPlate
+
+    printBoilerPlate(DAY, NAME)
 
     # part 1
     initialPolymer = readFileToList(filename=INPUT_FILE)[0]
